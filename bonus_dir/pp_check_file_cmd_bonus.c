@@ -6,7 +6,7 @@
 /*   By: odessein <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 17:38:36 by odessein          #+#    #+#             */
-/*   Updated: 2022/07/31 20:07:03 by odessein         ###   ########.fr       */
+/*   Updated: 2022/11/29 10:50:32 by odessein         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "pipex.h"
@@ -51,7 +51,7 @@ t_bool	pp_check_file(int ac, char **av, t_info *info)
 			info->fd[0] = open(av[1], O_RDONLY);
 			if (info->fd[0] == -1)
 			{
-				perror(file);
+				perror(av[1]);
 				return (FALSE);
 			}
 		}
